@@ -9,14 +9,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,500" rel="stylesheet">
 	<link rel="stylesheet" href="css/fontello.css">
 	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/jquery-3.3.1.js"></script>
 	<script src="js/jquery.min.js"></script>
-
-	<script src="js/popper.min.js"></script>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.bootstrap4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-
 	<script src="js/Main.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
 
 	<script>
 		function myFunction(datos) {
@@ -35,6 +35,18 @@
 			$("#PacienteEgresados").text(pacientEgr);
 			$('#modalservice').modal('toggle');
 		}
+	</script>
+	<script>
+		$(document).ready(function() {
+    	$('#tablaRegistros').DataTable();
+		} );
+	</script>
+	<script>
+		$(document).ready(function(){
+  			$("#vRegistros").click(function(){
+  		$("#main").load("registros.php");
+			});
+		});
 	</script>
 </head>
 
@@ -68,7 +80,7 @@
 				</nav>
 			</div>
 
-			<main class="main col">
+			<main class="main col" id="main">
 				<div class="row">
 					<div class="columna col-lg-7">
 						<div class="widget nueva_entrada">
@@ -114,7 +126,7 @@
 										<!-- .table-hover Nos permite agregarle un hover a las filas -->
 										<!-- .table-sm Nos permite hacer la tabla mas pequeña eliminando paddings -->
 										<!-- .table-responsive-xx Nos permite adaptar nuestra tabla a dispositivos moviles -->
-										<table class="table table-sm table-hover table-bordered table-responsive-lg">
+										<table class="table table-sm table-hover table-bordered table-responsive-lg" id="tablaRegistros">
 											<thead>
 												<tr>
 													<th>Actividad</th>
@@ -156,8 +168,8 @@
 												<td>12/12/1212 00:00:00</td>
 											</tr>
 										</table>
-										<a href="#" class="btn btn-primary">Ver Mas</a>
-
+										<button class="btn btn-primary" id="vRegistros">Ver Mas</button>
+										
 									</div>
 								</div>
 							</div>
