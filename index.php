@@ -10,37 +10,32 @@
 	<link rel="stylesheet" href="css/fontello.css">
 	<link rel="stylesheet" href="css/estilos.css">
 	<script src="js/jquery.min.js"></script>
-	
+
 	<script src="js/popper.min.js"></script>
-	
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="js/bootstrap.min.js"></script>
- 
+	<script src="js/bootstrap.min.js"></script>
+
 	<script src="js/Main.js"></script>
-	
-	
-		
 
+	<script>
+		function myFunction(datos) {
 
-		
-		<script>
-			function myFunction(datos) {
-		
-				var servNomb = $('#' + datos + 'nombreServ').val();
-				var maqNomb = $('#' + datos + 'nombreMaq').val();
-				var estado = $('#' + datos + 'estado').val();
-				var pacientReg = $('#' + datos + 'pacientes').val();
-				var pacientIng = $('#' + datos + 'ingresados').val();
-				var pacientEgr = $('#' + datos + 'egresados').val();
-				$("#nombreServicio").text(servNomb);
-				$("#nombreMaquina").text(maqNomb);
-				$("#nombreEstado").text(estado);
-				$("#pacienteRegistrados").text(pacientReg);
-				$("#PacientesIngresados").text(pacientIng);
-				$("#PacienteEgresados").text(pacientEgr);
-				$('#modalservice').modal('toggle');
-			}
-		</script>
+			var servNomb = $('#' + datos + 'nombreServ').val();
+			var maqNomb = $('#' + datos + 'nombreMaq').val();
+			var estado = $('#' + datos + 'estado').val();
+			var pacientReg = $('#' + datos + 'pacientes').val();
+			var pacientIng = $('#' + datos + 'ingresados').val();
+			var pacientEgr = $('#' + datos + 'egresados').val();
+			$("#nombreServicio").text(servNomb);
+			$("#nombreMaquina").text(maqNomb);
+			$("#nombreEstado").text(estado);
+			$("#pacienteRegistrados").text(pacientReg);
+			$("#PacientesIngresados").text(pacientIng);
+			$("#PacienteEgresados").text(pacientEgr);
+			$('#modalservice').modal('toggle');
+		}
+	</script>
 </head>
 
 <style>
@@ -79,7 +74,7 @@
 						<div class="widget nueva_entrada">
 							<h3 class="titulo">Estados de Maquinas</h3>
 							<div id="includedContent"></div>
-							
+
 
 							<?php require('query/Service.php'); ?>
 						</div>
@@ -128,9 +123,9 @@
 													<th>Fecha</th>
 												</tr>
 											</thead>
-<?php
-	require "modal/ServiceModal.php";
-	?>
+											<?php
+											require "modal/ServiceModal.php";
+											?>
 											<!-- .table-active -->
 											<!-- .table-success -->
 											<!-- .table-warning -->
@@ -172,6 +167,7 @@
 								<h3 class="titulo">Alertas</h3>
 								<div class="alert alert-danger mt-3">
 									<strong>Se ha detectado un error en la Maquina: XX </strong></a>
+									
 								</div>
 							</div>
 						</div>
