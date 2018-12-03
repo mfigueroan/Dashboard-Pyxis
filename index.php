@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Dashboard</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<link rel="stylesheet" href="css/bootstrap3-3-7.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,500" rel="stylesheet">
 	<link rel="stylesheet" href="css/fontello.css">
 	<link rel="stylesheet" href="css/estilos.css">
@@ -16,11 +18,9 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/Main.js"></script>
 	<script src="js/funciones-dashboard.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
 	
 </head>
-
-
 
 <body>
 	<div class="container-fluid">
@@ -30,11 +30,11 @@
 					<h2>Dashboard</h2>
 				</div>
 				<nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-					<a href="#" id="inicio"><i class="icon-home"></i><span>Inicio</span></a>
-					<a href="#" id="registros"><i class="icon-doc-text"></i><span>Registros</span></a>
-					<a href="#"><i class="icon-users"></i><span>Seguimiento Paciente</span></a>
-					<a href="#"><i class="icon-cog-alt"></i><span>Alertas</span></a>
-					<a href="#"><i class="icon-logout"></i><span>Salir</span></a>
+					<a href="#" id="inicio"><i class="icon-export"></i><span>Inicio</span></a>
+					<a href="#" id="registros"><i class="icon-attention"></i><span>Registros</span></a>
+					<a href="#"><i class="icon-attention"></i><span>Seguimiento Paciente</span></a>
+					<a href="#" id="alertas"><i class="icon-attention-circled"></i><span>Alertas</span></a>
+					<a href="#"><i class="icon-eye-off"></i><span>Salir</span></a>
 				</nav>
 			</div>
 

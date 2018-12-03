@@ -1,15 +1,14 @@
-<head><h1>Registros</h1></head>
+<head><h1>Alertas</h1></head>    
 <script>
 		$(document).ready(function() {
-    	$('#tablaRegistros').DataTable();
+    	$('#tablaAlertas').DataTable();
 		} );
     </script>
-    
-    <table class="table table-sm table-hover table-bordered table-responsive-lg" id="tablaRegistros">
+    <table class="table table-sm table-hover table-bordered table-responsive-lg" id="tablaAlertas">
 											<thead>
 												<tr>
-													<th>Actividad</th>
-													<th>Maquina</th>
+													<th>Alerta</th>
+													<th>Descripcion</th>
 													<th>Estado</th>
 													<th>Fecha</th>
 												</tr>
