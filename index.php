@@ -15,54 +15,12 @@
 	<script src="js/dataTables.bootstrap4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/Main.js"></script>
+	<script src="js/funciones-dashboard.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	
-
-	<script>
-		function myFunction(datos) {
-
-			var servNomb = $('#' + datos + 'nombreServ').val();
-			var maqNomb = $('#' + datos + 'nombreMaq').val();
-			var estado = $('#' + datos + 'estado').val();
-			var pacientReg = $('#' + datos + 'pacientes').val();
-			var pacientIng = $('#' + datos + 'ingresados').val();
-			var pacientEgr = $('#' + datos + 'egresados').val();
-			$("#nombreServicio").text(servNomb);
-			$("#nombreMaquina").text(maqNomb);
-			$("#nombreEstado").text(estado);
-			$("#pacienteRegistrados").text(pacientReg);
-			$("#PacientesIngresados").text(pacientIng);
-			$("#PacienteEgresados").text(pacientEgr);
-			$('#modalservice').modal('toggle');
-		}
-	</script>
-	<script>
-		$(document).ready(function() {
-    	$('#tablaRegistros').DataTable();
-		} );
-	</script>
-	<script>
-		$(document).ready(function(){
-  			$("#vRegistros").click(function(){
-  		$("#main").load("registros.php");
-			});
-		});
-	</script>
 </head>
 
-<style>
-	.row {
-		background: #e0e0d1;
 
-	}
-
-	.columna {
-		background: #f2f2f2;
-		text-align: center;
-
-
-	}
-</style>
 
 <body>
 	<div class="container-fluid">
@@ -72,8 +30,8 @@
 					<h2>Dashboard</h2>
 				</div>
 				<nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-					<a href="#"><i class="icon-home"></i><span>Inicio</span></a>
-					<a href="#"><i class="icon-doc-text"></i><span>Registros</span></a>
+					<a href="#" id="inicio"><i class="icon-home"></i><span>Inicio</span></a>
+					<a href="#" id="registros"><i class="icon-doc-text"></i><span>Registros</span></a>
 					<a href="#"><i class="icon-users"></i><span>Seguimiento Paciente</span></a>
 					<a href="#"><i class="icon-cog-alt"></i><span>Alertas</span></a>
 					<a href="#"><i class="icon-logout"></i><span>Salir</span></a>

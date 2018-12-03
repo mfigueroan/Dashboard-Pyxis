@@ -4,6 +4,18 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.row {
+	background: #e0e0d1;
+
+}
+
+.columna {
+	background: #f2f2f2;
+	text-align: center;
+
+
+}
+
 /* --- --- BARRA LATERAL --- --- */
 .barra-lateral {
 	background: #262a34;
@@ -29,7 +41,7 @@ body {
 	padding: 20px 0;
 	text-align: center;
 	font-weight: 300;
-	margin:0;
+	margin: 0;
 }
 
 /* --- MENU --- */
@@ -38,7 +50,7 @@ body {
 	padding: 20px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
-	border-bottom: 1px solid rgba(255,255,255,.1);
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
 .barra-lateral .menu a:hover {
@@ -81,7 +93,7 @@ body {
 	margin-bottom: 20px;
 	font-family: 'Open Sans', sans-serif;
 	border: none;
-	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .main .widget form input[type="text"] {
@@ -91,7 +103,7 @@ body {
 .main .widget form textarea {
 	height: 400px;
 	min-height: 200px;
-	max-width: 100%; 
+	max-width: 100%;
 	min-width: 100%;
 }
 
@@ -116,7 +128,7 @@ body {
 
 /* --- Widget Estadisticas --- */
 .main .estadisticas .contenedor {
-	box-shadow: 0px 1px 1px 0px rgba(0,0,0,.2);
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, .2);
 }
 
 .main .estadisticas .caja {
@@ -148,7 +160,7 @@ body {
 
 /* --- Widget Comentarios --- */
 .main .comentarios .contenedor {
-	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .main .comentarios .comentario {
@@ -198,12 +210,26 @@ body {
 	margin-bottom: 10px;
 }
 
-.main .comentarios .comentario .botones .aprobar {background: #35ae6b;}
-.main .comentarios .comentario .botones .eliminar {background: #b74848;}
-.main .comentarios .comentario .botones .bloquear {color: #acacac;}
+.main .comentarios .comentario .botones .aprobar {
+	background: #35ae6b;
+}
 
-.main .comentarios .comentario .botones .aprobar:hover {background: #449d44;}
-.main .comentarios .comentario .botones .eliminar:hover {background: #c9302c;}
+.main .comentarios .comentario .botones .eliminar {
+	background: #b74848;
+}
+
+.main .comentarios .comentario .botones .bloquear {
+	color: #acacac;
+}
+
+.main .comentarios .comentario .botones .aprobar:hover {
+	background: #449d44;
+}
+
+.main .comentarios .comentario .botones .eliminar:hover {
+	background: #c9302c;
+}
+
 .main .comentarios .comentario .botones .bloquear:hover {
 	background: #acacac;
 	color: #fff;
@@ -224,7 +250,7 @@ body {
 	}
 
 	.barra-lateral .menu a i {
-		margin:0;
+		margin: 0;
 	}
 }
 

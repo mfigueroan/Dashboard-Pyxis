@@ -7,53 +7,40 @@ $service = array
  array("Nombre del servicio 3","Maquina 6RZD","estado",100,50,30,"ID03"),
   array("Nombre del servicio 4","Maquina 7RZD","estado",100,20,50,"ID04")
   );
-  if ($service[0][4] - $service[0][5] == 0) {
-    print("is");
+  
+  for ($row = 0; $row < count($service); $row++) {
+   
+  $colorAlert = "";
+  if ((int)($service[$row][4] - $service[$row][5]) == 0) {
+    $colorAlert="#008000";
     
   }else {
-    print("no");
+   $colorAlert = "red";
 
   }
-  // for ($row = 0; $row < count($service); $row++) {
-  
-
-  echo "<div class='columna col-auto'>"
+$id = $service[$row][6];
+  echo "<div class='columna col-md-3'>"
                ."<table style='display: inline-block; border: 1px solid; float: center;'>"
                ."<tbody>"
                ."<tr>"
-               ."<td>".$service[0][0]."</td>"
+               ."<td>".$service[$row][0]."</td>"
                ."</tr>"
                ."<tr>"
-               ."<td style='background-color:#008000;'>".$service[0][1]."<button class='button' onclick=myFunction('".$service[0][6]."')><span class='glyphicon glyphicon-search'></span></button>"."</br>"
+               ."<td style='background-color:".$colorAlert.";'>".$service[0][1]."<button class='button' onclick=myFunction('".$service[0][6]."')><span class='glyphicon glyphicon-search'></span></button>"."</br>"
                ."<img src='image/pc.png' style = 'width:40px' ></center>
-               </td>"       
-               ."</tr>"
-
-               ."<tr>"
-               ."<td>".$service[1][0]."</td>"
-               ."</tr>"
-               ."<tr>"
-               ."<td style='background-color:#ff0000;'>".$service[1][1]."<button class='button' onclick=myFunction('".$service[1][6]."')><span class='glyphicon glyphicon-search'></span></button>"."</br>"
-               ."<img src='image/pc.png' style = 'width:40px' ></center>
-               </td>"
-               
-               ."</tr>"
-               ."</tbody>"
-               ."</table >".
-
-
-               "<input type='hidden' id='".$service[0][6]."nombreServ"."'  value='".$service[0][0]."'>"
-              //  "<input type='hidden' id='".$service[$row][6]."nombreMaq"."'  value='".$service[$row][1]."'>".
-              //  "<input type='hidden' id='".$service[$row][6]."estado"."'  value='".$service[$row][2]."'>".
-              //  "<input type='hidden' id='".$service[$row][6]."pacientes"."' value='".$service[$row][3]."'>".
-              //  "<input type='hidden' id='".$service[$row][6]."ingresados"."' value='".$service[$row][4]."'>".
-              //  "<input type='hidden' id='".$service[$row][6]."egresados"."' value='".$service[$row][5]."'>"
+               </td>"."</tr>"."</tbody>"."</table >".
+               "<input type='hidden' id='".$service[$row][6]."nombreServ"."'  value='".$service[$row][0]."'>".
+               "<input type='hidden' id='".$service[$row][6]."nombreMaq"."'  value='".$service[$row][1]."'>".
+               "<input type='hidden' id='".$service[$row][6]."estado"."'  value='".$service[$row][2]."'>".
+               "<input type='hidden' id='".$service[$row][6]."pacientes"."' value='".$service[$row][3]."'>".
+               "<input type='hidden' id='".$service[$row][6]."ingresados"."' value='".$service[$row][4]."'>".
+               "<input type='hidden' id='".$service[$row][6]."egresados"."' value='".$service[$row][5]."'>"
               . "</div>";
   
     //echo $service[$row][$col];
 
 
-// }
+}
 
     
     
