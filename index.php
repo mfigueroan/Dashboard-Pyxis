@@ -54,7 +54,10 @@
 							<h3 class="titulo">Estados Generales</h3>
 							<div class="contenedor d-flex flex-wrap">
 								<div class="caja" style="color: #35ae3b;">
-									<h3>14</h3>
+									<h3><?php
+										$var = $_SESSION['conB'];;
+										echo  $var;
+					 					?></h3>
 									<p>Bueno</p>
 								</div>
 								<div class="caja" style="color: #aea635;">
@@ -62,12 +65,18 @@
 									<p>Medio</p>
 								</div>
 								<div class="caja" style="color: #ae3535;">
-									<h3>3</h3>
-									<p>Alto</p>
+									<h3><?php
+										$var = $_SESSION['conM'];;
+										echo  $var;
+					 					?></h3>
+									<p>Malo</p>
 								</div>
 								<div class="caja" style="color: #3541ae;">
-									<h3>1604</h3>
-									<p>Total Pacientes</p>
+									<h3><?php
+										$var = $_SESSION['totalP'];;
+										echo  $var;
+					 					?></h3>
+									<p>Pacientes Registrados</p>
 								</div>
 							</div>
 						</div>
@@ -135,7 +144,7 @@
 							<div class="col">
 								<h3 class="titulo">Alertas</h3>
 								<div class="alert alert-danger mt-3">
-									<strong>Se ha detectado un error en la Maquina: XX </strong></a>
+									<strong>Se ha detectado un error de consistencia en Maquina: </strong></a>
 									
 								</div>
 							</div>

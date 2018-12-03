@@ -8,19 +8,23 @@ $service = array
   array("Nombre del servicio 3","Maquina 6RZD","estado",100,50,50,"ID03"),
   array("Nombre del servicio 4","Maquina 7RZD","estado",100,20,50,"ID04")
   );
-  
-  for ($row = 0; $row < count($service); $row++) {
-   
-  $colorAlert = "";
+  $conB = 0;
+  $conM = 0;
+  $totalP = 0;
 
+  for ($row = 0; $row < count($service); $row++) {
+  $colorAlert = "";
+  $estado ="";
   if ((int)($service[$row][4] - $service[$row][5]) == 0) {
     $colorAlert="#008000";
- 
+    $estado ="Bueno";
+    $conB ++;
   }else {
     $colorAlert = "red";
-  
+    $estado ="Malo";
+    $conM ++;
   }
- 
+  $totalP = $totalP +$service[$row][3];
 
 $id = $service[$row][6];
   echo "<div class='columna col-md-3'>"
@@ -30,12 +34,12 @@ $id = $service[$row][6];
                ."<td>".$service[$row][0]."</td>"
                ."</tr>"
                ."<tr>"
-               ."<td style='background-color:".$colorAlert.";'>".$service[0][1]."<button class='button' onclick=myFunction('".$service[0][6]."')><span class='glyphicon glyphicon-search'></span></button>"."</br>"
+               ."<td style='background-color:".$colorAlert.";'>".$service[$row][1]."<button class='button' onclick=myFunction('".$service[$row][6]."')><span class='glyphicon glyphicon-search'></span></button>"."</br>"
                ."<img src='image/pc.png' style = 'width:40px' ></center>
                </td>"."</tr>"."</tbody>"."</table >".
                "<input type='hidden' id='".$service[$row][6]."nombreServ"."'  value='".$service[$row][0]."'>".
                "<input type='hidden' id='".$service[$row][6]."nombreMaq"."'  value='".$service[$row][1]."'>".
-               "<input type='hidden' id='".$service[$row][6]."estado"."'  value='".$service[$row][2]."'>".
+               "<input type='hidden' id='".$service[$row][6]."estado"."'  value='".$estado."'>".
                "<input type='hidden' id='".$service[$row][6]."pacientes"."' value='".$service[$row][3]."'>".
                "<input type='hidden' id='".$service[$row][6]."ingresados"."' value='".$service[$row][4]."'>".
                "<input type='hidden' id='".$service[$row][6]."egresados"."' value='".$service[$row][5]."'>"
@@ -43,7 +47,9 @@ $id = $service[$row][6];
   
     //echo $service[$row][$col];
 
-
+    $_SESSION['conB'] = $conB;
+    $_SESSION['conM'] = $conM;
+    $_SESSION['totalP'] = $totalP;
 }
 
     
