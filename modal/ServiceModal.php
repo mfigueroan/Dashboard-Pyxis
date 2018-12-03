@@ -1,5 +1,3 @@
-
-
 <div class="modal fade" id="modalservice" role="dialog">
     <div class="modal-dialog">
     

@@ -29,11 +29,11 @@
 					<h2>Dashboard</h2>
 				</div>
 				<nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-					<a href="#" id="inicio"><i class="icon-export"></i><span>Inicio</span></a>
-					<a href="#" id="registros"><i class="icon-attention"></i><span>Registros</span></a>
-					<a href="#"><i class="icon-attention"></i><span>Seguimiento Paciente</span></a>
+					<a href="#" id="inicio"><i class="icon-home"></i><span>Inicio</span></a>
+					<a href="#" id="registros"><i class="icon-th-list"></i><span>Registros</span></a>
+					<a href="#"><i class="icon-user"></i><span>Seguimiento Paciente</span></a>
 					<a href="#" id="alertas"><i class="icon-attention-circled"></i><span>Alertas</span></a>
-					<a href="#"><i class="icon-eye-off"></i><span>Salir</span></a>
+					<a href="#"><i class="icon-export"></i><span>Salir</span></a>
 				</nav>
 			</div>
 
